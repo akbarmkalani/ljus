@@ -1,0 +1,174 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kalam:wght@700&family=Libre+Baskerville:ital@1&family=Montserrat:ital@1&family=Playfair+Display:ital,wght@0,900;1,900&display=swap');
+
+body{
+  font-family: 'Courgette', cursive;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background:repeating-linear-gradient(
+        45deg,
+        #030326 0,
+         #070328
+
+
+    );
+   /*  background-color: black; */
+}
+
+
+
+/* 
+velas
+*/
+
+.velas {
+  background: #fdfdfd;
+  border-radius: 10px;
+  position: absolute;
+  top: 228px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8px;
+  width: 20px;
+  height: 150px;
+  transform: translateY(-300%);
+  backface-visibility: hidden;
+  animation: in 500ms 3s ease-out forwards;
+}
+.velas:after,
+.velas:before {
+  background: #ff0000cf;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* 
+Fire
+*/
+
+.velas>div {
+  border-radius: 100%;
+  position: absolute;
+  top: -38px;
+  left: 22%;
+  margin-left: -2.6px;
+  width: 13.66666667px;
+  height: 34px;
+/*   transform: translate(-50% -50%); */
+}
+.velas>div:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+.velas>div:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+.velas>div:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+.velas>div:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+.velas>div:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/*  Animation Fire
+*/
+
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(235, 124, 5, 0.73);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(0, 242, 255, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.text {
+  width: 100%;
+  height: 330px;
+  color: #089de1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style:italic;
+  text-align: center;
+  position: absolute; 
+     top: 50%;;
+ 
+
+  /* background-color: white; */
+  
+}
+
+svg>text{
+  font-size: 25vh; 
+  font-family: 'Courgette', cursive;
+  
+}
+.change{
+  fill: none;
+  stroke: #fff;
+ stroke-width: 4px ;
+ stroke-dasharray: 20% 30%;
+ stroke-dashoffset: 0%;
+ animation: textnimation 10s linear infinite;
+
+}
+@keyframes textnimation{
+  100%{
+    stroke-dashoffset: -35%; 
+  }
+ 
+ }
+ .change1{
+   stroke: #02d5ff;
+   animation-delay: -1s;
+ }
+ .change2{
+  stroke: #ff660e;
+  animation-delay: -2s;
+}
+.change3{
+  stroke: #e908fd;
+  animation-delay: 3s;
+}
+
+.change4{
+  stroke: #d0fd06;
+  animation-delay: 4s;
+}
+.change5{
+  stroke: #3cfd06;
+  animation-delay: 5s;
+}
+.change6{
+  stroke: #fd060a;
+  animation-delay: 6s;
+}
+.change7{
+  stroke: #061bfd;
+  animation-delay: 7s;
+}
